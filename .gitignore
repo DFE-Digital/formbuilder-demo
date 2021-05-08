@@ -17,6 +17,9 @@
 /public/assets
 .byebug_history
 
+# Ignore database files
+db/*.sqlite3
+
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 /public/packs
