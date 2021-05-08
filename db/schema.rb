@@ -13,10 +13,11 @@
 ActiveRecord::Schema.define(version: 2021_05_08_112536) do
 
   create_table "orders", force: :cascade do |t|
-    t.string "size"
+    t.integer "size"
+    t.integer "custom_size"
     t.string "toppings"
     t.string "base"
-    t.string "crust"
+    t.string "stuffed_crust"
     t.string "sauce"
     t.string "cheese"
     t.string "sides"

@@ -82,6 +82,7 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    deep_merge (1.2.1)
     diff-lcs (1.4.4)
     dotenv (2.7.6)
     dotenv-rails (2.7.6)
@@ -92,6 +93,11 @@ GEM
     foreman (0.87.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    govuk_design_system_formbuilder (2.5.0)
+      actionview (>= 6.0)
+      activemodel (>= 6.0)
+      activesupport (>= 6.0)
+      deep_merge (~> 1.2.1)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     listen (3.5.1)
@@ -267,6 +273,7 @@ DEPENDENCIES
   capybara (~> 3.35)
   dotenv-rails
   foreman
+  govuk_design_system_formbuilder (>= 2.5.0)
   listen (>= 3.0.5, < 3.6)
   pry-byebug
   puma (~> 5.2)
