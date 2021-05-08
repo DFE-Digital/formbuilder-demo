@@ -13,10 +13,17 @@
 
 1. Run `bundle install` to install the gem dependencies
 2. Run `yarn` to install node dependencies
-3. Run `bin/rails db:setup` to set up the database development and test schemas, and seed with test data
-4. Run `bundle exec rails server` to launch the app on http://localhost:3000
+3. Run `bin/rails db:setup` to set up the database development and test
+   schemas, and seed with test data
+4. Run `bundle exec rails server` to launch the app on [http://localhost:3000]
 5. Run `./bin/webpack-dev-server` in a separate shell for faster compilation of assets
 6. Navigate to `http://localhost:3000`
+
+## Interesting files
+
+* [The form](app/views/orders/_form.html.erb)
+* [The controller](app/controllers/orders_controller.rb)
+* [The order localisation settings](config/locales/orders.en.yml)
 
 ## Preview
 
