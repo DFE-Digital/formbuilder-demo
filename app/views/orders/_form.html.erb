@@ -1,0 +1,82 @@
+<%= form_with(model: order) do |form| %>
+  <% if order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+        <% order.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :toppings %>
+    <%= form.text_field :toppings %>
+  </div>
+
+  <div class="field">
+    <%= form.label :base %>
+    <%= form.text_field :base %>
+  </div>
+
+  <div class="field">
+    <%= form.label :crust %>
+    <%= form.text_field :crust %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sauce %>
+    <%= form.text_field :sauce %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cheese %>
+    <%= form.text_field :cheese %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sides %>
+    <%= form.text_field :sides %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :allergies %>
+    <%= form.text_field :allergies %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :delivery_date %>
+    <%= form.text_field :delivery_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

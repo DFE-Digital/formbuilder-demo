@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @order.size %>
+</p>
+
+<p>
+  <strong>Toppings:</strong>
+  <%= @order.toppings %>
+</p>
+
+<p>
+  <strong>Base:</strong>
+  <%= @order.base %>
+</p>
+
+<p>
+  <strong>Crust:</strong>
+  <%= @order.crust %>
+</p>
+
+<p>
+  <strong>Sauce:</strong>
+  <%= @order.sauce %>
+</p>
+
+<p>
+  <strong>Cheese:</strong>
+  <%= @order.cheese %>
+</p>
+
+<p>
+  <strong>Sides:</strong>
+  <%= @order.sides %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @order.phone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Allergies:</strong>
+  <%= @order.allergies %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Delivery date:</strong>
+  <%= @order.delivery_date %>
+</p>
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

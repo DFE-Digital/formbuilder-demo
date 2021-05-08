@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :orders
   get "/pages/:page", to: "pages#show"
 
   get "/404", to: "errors#not_found", via: :all
