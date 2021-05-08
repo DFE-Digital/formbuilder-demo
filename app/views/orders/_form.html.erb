@@ -1,82 +1,61 @@
 <%= form_with(model: order) do |form| %>
-  <% if order.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(order.errors.count, "error") %> prohibited this order from being saved:</h2>
+  <%= form.govuk_error_summary %>
 
-      <ul>
-        <% order.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+  <%= form.govuk_radio_buttons_fieldset(:size, legend: { size: "l" }) do %>
+    <% @sizes.each.with_index do |(description, diameter), i| %>
+      <%= form.govuk_radio_button(
+        :size,
+        diameter,
+        label: { text: %[#{description} (#{diameter} inches) ] },
+        link_errors: i.zero? # ensure the error summary will link to the first option
+      ) %>
+    <% end %>
+
+    <%= form.govuk_radio_button(:size, "custom", label: { text: "Custom" }) do %>
+      <%= form.govuk_number_field :custom_size, suffix_text: "inches", width: 5 %>
+    <% end %>
   <% end %>
 
-  <div class="field">
-    <%= form.label :size %>
-    <%= form.text_field :size %>
-  </div>
+  <%= form.govuk_check_boxes_fieldset(:toppings, legend: { size: "l" }) do %>
+    <% @toppings.each.with_index do |topping, i| %>
+      <%= form.govuk_check_box(
+        :toppings,
+        topping,
+        label: { text: topping.capitalize },
+        link_errors: i.zero?
+      ) %>
+    <% end %>
+  <% end %>
 
-  <div class="field">
-    <%= form.label :toppings %>
-    <%= form.text_field :toppings %>
-  </div>
+  <%= form.govuk_collection_radio_buttons(
+    :base,
+    @bases,
+    ->(base) { base.parameterize },
+    ->(base) { base },
+    inline: true,
+    legend: { size: "l" },
+    caption: { size: "m" }
+  ) %>
 
-  <div class="field">
-    <%= form.label :base %>
-    <%= form.text_field :base %>
-  </div>
+  <%= form.govuk_check_boxes_fieldset(:stuffed_crust, multiple: false) do %>
+    <%= form.govuk_check_box(:stuffed_crust, 1, 0, multiple: false) %>
+  <% end %>
 
-  <div class="field">
-    <%= form.label :crust %>
-    <%= form.text_field :crust %>
-  </div>
+  <%= form.govuk_select(:sauce, @sauces, label: { size: "m" }) %>
+  <%= form.govuk_collection_select(:cheese, @cheeses, :id, :name, label: { size: "m" }) %>
+  <%= form.govuk_collection_check_boxes(:sides, @sides, :id, :name) %>
 
-  <div class="field">
-    <%= form.label :sauce %>
-    <%= form.text_field :sauce %>
-  </div>
 
-  <div class="field">
-    <%= form.label :cheese %>
-    <%= form.text_field :cheese %>
-  </div>
+  <%= form.govuk_fieldset(legend: { text: "Some information about you", size: "l", tag: "h2" }) do %>
+    <%= form.govuk_text_field(:name, width: "one-third") %>
+    <%= form.govuk_phone_field(:phone, width: "one-third") %>
+    <%= form.govuk_email_field(:email, width: "one-third") %>
+    <%= form.govuk_text_area(:address, height: 6, max_words: 100) %>
+    <%= form.govuk_date_field(:delivery_date) %>
+    <%= form.govuk_text_area(:allergies, height: 6, max_words: 100, label: { size: "m" }) %>
+  <% end %>
 
-  <div class="field">
-    <%= form.label :sides %>
-    <%= form.text_field :sides %>
-  </div>
-
-  <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
-
-  <div class="field">
-    <%= form.label :allergies %>
-    <%= form.text_field :allergies %>
-  </div>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :address %>
-    <%= form.text_field :address %>
-  </div>
-
-  <div class="field">
-    <%= form.label :delivery_date %>
-    <%= form.text_field :delivery_date %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <%= form.govuk_submit do %>
+    <%= link_to 'Back', orders_path, class: "govuk-link" %>
+  <% end %>
 <% end %>

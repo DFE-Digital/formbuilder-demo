@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: "orders#new"
   resources :orders
   get "/pages/:page", to: "pages#show"
 

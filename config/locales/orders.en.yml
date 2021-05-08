@@ -1,0 +1,39 @@
+---
+en:
+  helpers:
+    label:
+      order:
+        name: What's your name?
+        phone: What is your phone number
+        stuffed_crust_options:
+          1: Yes, I do
+        sauce: Choose your sauce
+        cheese: Pick one of our cheese options 🧀
+        email: What is your email address?
+        address: Tell us where the order should be delivered
+        custom_size: What size would you like?
+
+    hint:
+      order:
+        phone: |-
+          We will only use this number to inform you about your order's
+          progress.
+        sides: |-
+          Your first side order is free.
+        toppings: Your first topping is included in the price.
+        allergies: |-
+          If you want us to tweak our recipe to avoid certain ingredients, let
+          us know here
+        custom_size: We can make any size of pizza up to 24 inches in diameter
+
+    legend:
+      order:
+        size: What size do you want?
+        toppings: Which toppings would you like?
+        stuffed_crust: Do you want your crust stuffed with delicious mozzarella?
+        base: Which style of base would you like?
+        delivery_date: When would you like us to make the delivery?
+
+    caption:
+      order:
+        base: Cooked in our wood-fired pizza oven
