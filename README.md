@@ -1,5 +1,3 @@
-![Deploy](https://github.com/DFE-Digital/govuk-rails-boilerplate/workflows/Deploy/badge.svg)
-
 # GOV.UK Design System Formbuilder Demo App
 
 ## Prerequisites
