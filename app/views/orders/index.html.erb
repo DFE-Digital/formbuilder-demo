@@ -1,4 +1,21 @@
-<p id="notice"><%= notice %></p>
+<h1 class="govuk-heading-l">Summary list demo</h1>
 
+<%= govuk_summary_list do |sl| %>
+  <!-- normal row -->
+  <% sl.row do |row| %>
+    <% row.key(text: "Hello") %>
+    <% row.value(text: "World") %>
+    <% row.action(href: "/one") %>
+  <% end %>
 
+  <!-- normal row -->
+  <% sl.row do |row| %>
+    <% row.key(text: "Hello") %>
+    <% row.value(text: "World") %>
+    <% row.action(href: "/one") %>
+  <% end %>
 
+  <% sl.row do |row| %>
+    <% summary_list_row_builder(row, key: "Hi", value: "There", actions: { "Two" => "/two", "Three" => "/three" }) %>
+  <% end %>
+<% end %>
