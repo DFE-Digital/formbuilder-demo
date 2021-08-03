@@ -16,7 +16,7 @@ gem "puma", "~> 5.2"
 gem "webpacker"
 
 # GOV.UK Formbuilder
-gem "govuk_design_system_formbuilder", ">= 2.5.0"
+gem "govuk_design_system_formbuilder", ">= 2.7.2"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
