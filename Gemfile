@@ -17,6 +17,7 @@ gem "webpacker"
 
 # GOV.UK Formbuilder
 gem "govuk_design_system_formbuilder", ">= 2.7.2"
+gem "govuk-components", ">= 2.0.0rc1"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
