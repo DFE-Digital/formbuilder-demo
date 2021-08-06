@@ -1,6 +1,6 @@
-<%= form_with(model: order) do |form| %>
-  <%= form.govuk_error_summary %>
+<%= govuk_error_summary(@order, :order) %>
 
+<%= form_with(model: order) do |form| %>
   <%= form.govuk_radio_buttons_fieldset(:size, legend: { size: "l" }) do %>
     <% @sizes.each.with_index do |(description, diameter), i| %>
       <%= form.govuk_radio_button(

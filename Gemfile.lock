@@ -1,3 +1,14 @@
+GIT
+  remote: https://github.com/dfe-digital/govuk_design_system_formbuilder.git
+  revision: 13de25b8f9adf28f9982bf5df1a5c864dd81bf19
+  branch: helpers
+  specs:
+    govuk_design_system_formbuilder (2.5.3)
+      actionview (>= 6.0)
+      activemodel (>= 6.0)
+      activesupport (>= 6.0)
+      deep_merge (~> 1.2.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,11 +104,6 @@ GEM
     foreman (0.87.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    govuk_design_system_formbuilder (2.5.0)
-      actionview (>= 6.0)
-      activemodel (>= 6.0)
-      activesupport (>= 6.0)
-      deep_merge (~> 1.2.1)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     listen (3.5.1)
@@ -273,7 +279,7 @@ DEPENDENCIES
   capybara (~> 3.35)
   dotenv-rails
   foreman
-  govuk_design_system_formbuilder (>= 2.5.0)
+  govuk_design_system_formbuilder!
   listen (>= 3.0.5, < 3.6)
   pry-byebug
   puma (~> 5.2)
